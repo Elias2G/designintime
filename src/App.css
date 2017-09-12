@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: url('font/HelveticaNeueLTStd-Lt.otf');
+}
+
+.parallaxContainer {
+  width: 110%;
+  height: 110vh;
+  position: absolute;
+  z-index: 1;
+}
+
+.overFlowHidden {
+  width:100%;
+  height:980px;
+  overflow: hidden;
+  position: absolute;
+}
+
+body {
+  height: auto;
+}
+
+.fixHeight {
+  height: 980px;
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #ebebeb;
+}
+
+img {
+  user-select: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.fixIt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 75px;
+}
+
+@media screen and (max-width: 420px) {
+  .fixHeight {
+    height: 700px;
+  }
+
+  .fixIt {
+    padding-bottom: 50px;
+  }
+}
