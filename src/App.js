@@ -4,6 +4,7 @@ import './App.css';
 import { ParallaxComponent } from './parralaxComponents/ParralaxBackground';
 import { Header } from './headerComponents/Header';
 import { Body } from './components/Body';
+import { Footer } from './components/Footer.js';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <ParallaxComponent />
         </div>
         <Body />
+        <Footer />
       </div>
     );
   }

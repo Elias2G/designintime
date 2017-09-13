@@ -11,7 +11,7 @@ export const TeamContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 700px;
-  background-color: #ebebeb;
+  /*background-color: #ebebeb;*/
   position: absolute;
 `;
 
@@ -21,22 +21,23 @@ const PositionContainer = styled.div`
   align-items: center;
   width: 600px;
   height: 700px;
-  background-color: #2b2b2b;
+  /*background-color: #2b2b2b;*/
 `;
 
 const ImageContainer = styled.div`
   width: 300px;
   height: auto;
-  background-color: grey;
+  /*background-color: grey;*/
   float: left;
   position: absolute;
   transition: 300ms;
+  border-radius: 60px;
   ${props => props.firstStyle && css`
     margin-left: 50px;
   `}
   ${props => props.firstDown && css`
     &:hover {
-      background-color: red;
+      /*background-color: red;*/
       transform: translateX(50px);
       transition: 300ms;
     }
@@ -49,7 +50,7 @@ const ImageContainer = styled.div`
   `}
   ${props => props.secondDown && css`
     &:hover {
-      background-color: red;
+      /*background-color: red;*/
       transform: translateX(-50px);
       transition: 300ms;
     }
@@ -72,9 +73,9 @@ export const Image = styled.img`
   ${props => props.foto && css`
     /*background-color: rgba(255,255,255,0.5);*/
     width: 245px;
-    height: 287px;
+    height: 260px;
     position: absolute;
-    top: 72px;
+    top: 80px;
     border-radius: 10px;
   `}
   ${props => props.first && css`
@@ -85,20 +86,19 @@ export const Image = styled.img`
   `}
 `;
 
-export const Beschreibung = styled.p`
+export const Beschreibung = styled.div`
   box-sizing: border-box;
   margin: 0;
   padding: 5px 10px;
   width: 245px;
-  height: 100px;
+  height: 80px;
   position: absolute;
-  top: calc(321px + 40px);
+  top: calc(321px + 35px);
   color: #2b2b2b;
   font-family: Helvetica;
   font-size: 12pt;
   border-radius: 10px;
   background-color: rgba(255,255,255,0.4);
-  line-height: 18pt;
   ${props => props.blur && css`
     filter: blur(12px);
     background-color: rgba(255, 255, 255, 0.4);
@@ -119,10 +119,11 @@ export const Beschreibung = styled.p`
 
 export const LogoContainer = styled.div`
   width: 255px;
-  height: 65px;
+  height: 75px;
   position: absolute;
-  top: calc(423px + 40px);
-  background-color: rgba(50, 50, 50, 0.7);
+  top: calc(423px + 30px);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #2b2b2b;
   ${props => props.first && css`
     z-index: 2;
   `}
@@ -134,7 +135,13 @@ export const LogoContainer = styled.div`
 export const Logo = styled.img`
   width:55px;
   margin-left: 7px;
-  margin-top: 4px;
+  margin-top: 8px;
+  border-radius: 15px;
+  transition: 200ms;
+  &:hover {
+    box-shadow: 0 0 10px white ;
+    transition: 200ms;
+  }
 `;
 
 

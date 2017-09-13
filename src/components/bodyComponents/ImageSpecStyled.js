@@ -17,9 +17,13 @@ export class SpecImage extends Component {
           <Beschreibung textMark />
           <Beschreibung blur />
           <Beschreibung first>
+            <p className='fixedP'>
             <span className='bold'>Sandra-Bacher Schönfelder</span> <br />
+          </p>
+          <p className='fixedP topP'>
             Leitende Grafik-Designerin bei <br />
             DesignInTime
+          </p>
           </Beschreibung>
 
           <LogoContainer first>
@@ -51,9 +55,13 @@ export class SpecImage2 extends Component {
           <Beschreibung textMark />
           <Beschreibung blur />
           <Beschreibung second>
+            <p className='fixedP'>
             <span className='bold'>Wenghofer Dominik</span> <br />
+          </p>
+          <p className='fixedP topP'>
             Front-End Developer bei <br />
             DesignInTime
+          </p>
           </Beschreibung>
           <LogoContainer second>
 
