@@ -60,3 +60,8 @@ button:focus {
     padding-bottom: 50px;
   }
 }
+
+.bold {
+  font-weight:bold;
+  font-size:13.5pt;
+}

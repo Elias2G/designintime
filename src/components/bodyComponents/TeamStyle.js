@@ -70,12 +70,12 @@ export const Image = styled.img`
   width: 100%;
   position: relative;
   ${props => props.foto && css`
-    background-color: rgba(255,255,255,0.5);
-    width: 255px;
+    /*background-color: rgba(255,255,255,0.5);*/
+    width: 245px;
     height: 287px;
     position: absolute;
     top: 72px;
-    outline: none;
+    border-radius: 10px;
   `}
   ${props => props.first && css`
     z-index: 2;
@@ -88,12 +88,27 @@ export const Image = styled.img`
 export const Beschreibung = styled.p`
   box-sizing: border-box;
   margin: 0;
-  padding: 10px;
-  width: 255px;
+  padding: 5px 10px;
+  width: 245px;
   height: 100px;
   position: absolute;
   top: calc(321px + 40px);
-  background-color: rgba(255,255,255,0.5);
+  color: #2b2b2b;
+  font-family: Helvetica;
+  font-size: 12pt;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.4);
+  line-height: 18pt;
+  ${props => props.blur && css`
+    filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+  `}
+  ${props => props.textMark && css`
+    height: 30px;
+    z-index: 1;
+    border-radius: 10px 10px 0 0;
+  `}
   ${props => props.first && css`
     z-index: 2;
   `}
@@ -107,13 +122,19 @@ export const LogoContainer = styled.div`
   height: 65px;
   position: absolute;
   top: calc(423px + 40px);
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(50, 50, 50, 0.7);
   ${props => props.first && css`
     z-index: 2;
   `}
   ${props => props.second && css`
     z-index: 1;
   `}
+`;
+
+export const Logo = styled.img`
+  width:55px;
+  margin-left: 7px;
+  margin-top: 4px;
 `;
 
 
