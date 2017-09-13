@@ -30,14 +30,29 @@ const ImageContainer = styled.div`
   background-color: grey;
   float: left;
   position: absolute;
+  transition: 300ms;
   ${props => props.firstStyle && css`
     margin-left: 50px;
+  `}
+  ${props => props.firstDown && css`
+    &:hover {
+      background-color: red;
+      transform: translateX(50px);
+      transition: 300ms;
+    }
   `}
   ${props => props.first && css`
     z-index: 1;
   `}
   ${props => props.secondStyle && css`
     margin-left: -50px;
+  `}
+  ${props => props.secondDown && css`
+    &:hover {
+      background-color: red;
+      transform: translateX(-50px);
+      transition: 300ms;
+    }
   `}
   ${props => props.second && css`
     z-index: 0;
@@ -141,12 +156,12 @@ export class SwitchableContainer extends Component {
     return(
       <div>
         <PositionContainer>
-          <ImageContainer firstStyle first={this.state.toggleIndex1} second={this.state.toggleIndex2}>
-            <SpecImage/>
+          <ImageContainer firstDown={this.state.toggleIndex2} firstStyle first={this.state.toggleIndex1} second={this.state.toggleIndex2}>
+            <SpecImage />
             <Image src={Handy} onClick={this.handleOnClick1}/>
           </ImageContainer>
 
-          <ImageContainer secondStyle second={this.state.toggleIndex1} first={this.state.toggleIndex1}>
+          <ImageContainer secondDown={this.state.toggleIndex1} secondStyle second={this.state.toggleIndex1} first={this.state.toggleIndex1}>
             <SpecImage2 />
             <Image src={Handy} onClick={this.handleOnClick2}/>
           </ImageContainer>
