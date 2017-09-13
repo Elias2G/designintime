@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { Image, InlineHandyCenterContainer, Beschreibung, LogoContainer } from './TeamStyle';
-import Handy from '../../img/iphone.png';
+
 
 export class SpecImage extends Component {
   render() {
@@ -10,13 +10,14 @@ export class SpecImage extends Component {
         <InlineHandyCenterContainer>
           <Image foto first/>
           <Beschreibung first>
-            Hi
+            Sandra-Bacher Schönfelder <br />
+            Leitende Grafik-Designerin bei <br />
+            DesignInTime
           </Beschreibung>
           <LogoContainer first>
 
           </LogoContainer>
         </InlineHandyCenterContainer>
-        <Image src={Handy} />
       </div>
     );
   }
@@ -29,13 +30,14 @@ export class SpecImage2 extends Component {
         <InlineHandyCenterContainer>
           <Image foto second/>
           <Beschreibung second>
-            Hi
+            Wenghofer Dominik <br />
+            Front-End Developer bei <br />
+            DesignInTime
           </Beschreibung>
           <LogoContainer second>
 
           </LogoContainer>
         </InlineHandyCenterContainer>
-        <Image src={Handy} />
       </div>
     );
   }

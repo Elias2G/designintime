@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 
 import { SpecImage, SpecImage2 } from './ImageSpecStyled';
 
+import Handy from '../../img/iphone.png';
+
 export const TeamContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -28,13 +30,17 @@ const ImageContainer = styled.div`
   background-color: grey;
   float: left;
   position: absolute;
+  ${props => props.firstStyle && css`
+    margin-left: 50px;
+  `}
   ${props => props.first && css`
     z-index: 1;
-    margin-left: 50px;
+  `}
+  ${props => props.secondStyle && css`
+    margin-left: -50px;
   `}
   ${props => props.second && css`
     z-index: 0;
-    margin-left: -50px;
   `}
 `;
 
@@ -97,16 +103,52 @@ export const LogoContainer = styled.div`
 
 
 export class SwitchableContainer extends Component {
+  state = {
+    toggleIndex1: true,
+    toggleIndex2: false
+  }
+
+  handleOnClick1 = () => {
+    if(!this.state.toggleIndex1) {
+      this.setState({
+        toggleIndex1: true,
+        toggleIndex2: false
+      })
+    }else {
+      this.setState({
+        toggleIndex1: true,
+        toggleIndex2: false
+      })
+    }
+  }
+
+  handleOnClick2 = () => {
+    if(!this.state.toggleIndex2) {
+      this.setState({
+        toggleIndex1: false,
+        toggleIndex2: true
+      })
+    }else {
+      this.setState({
+        toggleIndex1: false,
+        toggleIndex2: true
+      })
+    }
+  }
+
+
   render() {
     return(
       <div>
         <PositionContainer>
-          <ImageContainer first>
-            <SpecImage />
+          <ImageContainer firstStyle first={this.state.toggleIndex1} second={this.state.toggleIndex2}>
+            <SpecImage/>
+            <Image src={Handy} onClick={this.handleOnClick1}/>
           </ImageContainer>
 
-          <ImageContainer second>
+          <ImageContainer secondStyle second={this.state.toggleIndex1} first={this.state.toggleIndex1}>
             <SpecImage2 />
+            <Image src={Handy} onClick={this.handleOnClick2}/>
           </ImageContainer>
         </PositionContainer>
       </div>
