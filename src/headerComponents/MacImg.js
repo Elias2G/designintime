@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Mac, MacContainerImg, VideoToggleButton, VideoAnimateEffect, VideoContainer, CenterContent, Frame } from './styles/MacStyles';
+import { Mac, MacContainerImg, VideoToggleButton, VideoAnimateEffect, VideoContainer, CenterContent, Frame, Triangle } from './styles/MacStyles';
 
 import MacImg from '../img/mac.png';
 
@@ -24,7 +24,9 @@ export class MacImgContainer extends Component {
           <MacContainerImg>
             <Mac src={MacImg} />
             <div className='fixIt'>
-              <VideoToggleButton effect onClick={this.handleClick}/>
+              <VideoToggleButton effect onClick={this.handleClick}>
+                <Triangle />
+              </VideoToggleButton>
               <VideoAnimateEffect />
             </div>
           </MacContainerImg>
@@ -40,7 +42,7 @@ export class MacImgContainer extends Component {
             <VideoContainer onClick={this.handleClick} videoZoom={this.state.animate}/>
           </div>
           <CenterContent>
-            <Frame ifFrameZoom src="https://www.youtube.com/embed/TrjePKd6b24" frameBorder="0" allowFullScreen>
+            <Frame ifFrameZoom src="https://www.youtube.com/embed/cCPT9Yx70gU" frameBorder="0" allowFullScreen>
             </Frame>
           </CenterContent>
         </div>

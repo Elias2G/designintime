@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 
-import { Image, InlineHandyCenterContainer, Beschreibung, LogoContainer, Logo } from './TeamStyle';
+import { InlineHandyCenterContainer, Beschreibung, LogoContainer, Logo } from './TeamStyle';
 import Tele from '../../img/tele-logo.png';
 import Mail from '../../img/mail-logo.png';
 import Face from '../../img/face-logo.png';
 import Insta from '../../img/insta-logo.png';
 
-import Sandra from '../../img/sandra-img.png';
 
 export class SpecImage extends Component {
   render() {
     return(
       <div>
         <InlineHandyCenterContainer>
-          <Image src={Sandra} foto first/>
           <Beschreibung textMark />
           <Beschreibung blur />
           <Beschreibung first>
@@ -51,7 +49,6 @@ export class SpecImage2 extends Component {
     return(
       <div>
         <InlineHandyCenterContainer>
-          <Image foto second/>
           <Beschreibung textMark />
           <Beschreibung blur />
           <Beschreibung second>
@@ -64,7 +61,18 @@ export class SpecImage2 extends Component {
           </p>
           </Beschreibung>
           <LogoContainer second>
-
+            <a href='tel:+4369919010202' >
+              <Logo src={Tele}/>
+            </a>
+            <a href='mailto:office@designintime.at'>
+              <Logo src={Mail}/>
+            </a>
+            <a target='_blank' href='https://www.facebook.com/search/top/?q=designintime'>
+              <Logo src={Face}/>
+            </a>
+            <a target='_blank' href='https://www.instagram.com/designintime.at/?hl=de'>
+              <Logo src={Insta}/>
+            </a>
           </LogoContainer>
         </InlineHandyCenterContainer>
       </div>

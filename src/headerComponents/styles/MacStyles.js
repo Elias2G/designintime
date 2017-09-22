@@ -120,6 +120,23 @@ export const VideoToggleButton = styled.button`
   `}
 `;
 
+export const Triangle = styled.div`
+margin-left: 37px;
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 30px 0 30px 60px;
+border-color: transparent transparent transparent #007bff;
+line-height: 0px;
+border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) rgba(255,255,255,1);
+filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+
+${ media.handheld`
+  margin-left: 30px;
+  border-width: 15px 0 15px 30px;
+` }
+`;
+
 export const Frame = styled.iframe`
   position: fixed;
   z-index: 21;

@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 
 import { SpecImage, SpecImage2 } from './ImageSpecStyled';
 
-import Handy from '../../img/iphone.png';
+import Handy from '../../img/iPhoneSandra.png';
+import Handy2 from '../../img/iPhoneWenge.png';
 
 export const TeamContainer = styled.div`
   display: flex;
@@ -191,7 +192,7 @@ export class SwitchableContainer extends Component {
 
           <ImageContainer secondDown={this.state.toggleIndex1} secondStyle second={this.state.toggleIndex1} first={this.state.toggleIndex1}>
             <SpecImage2 />
-            <Image src={Handy} onClick={this.handleOnClick2}/>
+            <Image src={Handy2} onClick={this.handleOnClick2}/>
           </ImageContainer>
         </PositionContainer>
       </div>
